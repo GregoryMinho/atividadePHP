@@ -37,7 +37,6 @@
                 break;
             case 4:
                 echo "Saindo...";
-                exit;
                 break;
             default:
                 echo "Opção inválida!";
