@@ -8,11 +8,18 @@
 </head>
 
 <body>
+    <h1>Verificação de Idade para Cadastro</h1>
+
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+        <label for="age">Idade:</label>
+        <input type="number" id="age" name="age" required>
+        <button type="submit">Verificar Idade</button>
+    </form>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        $age = $_POST["age"];
+        $age = $_POST["age"] ?? null;
 
 
         if (filter_var($age, FILTER_VALIDATE_INT) && $age > 0) {
@@ -26,14 +33,6 @@
         }
     }
     ?>
-
-    /*php retroalimentado abaixo:*/
-
-    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-        <label for="age">Idade:</label>
-        <input type="number" id="age" name="age" required>
-        <button type="submit">Verificar Idade</button>
-    </form>
 
 </body>
 
