@@ -20,21 +20,6 @@
     $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="id">ID:</label>
-        <input type="number" id="id" name="id"><br><br>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
-        <button type="button" onclick="editRecord()">Edit</button>
-        <button type="button" onclick="deleteRecord()">Delete</button>
-    </form>
-
-    <br><br>
-
     <h1 style="font-family: Arial, Helvetica, sans-serif;">Sistemas de Funcionarios</h1>
 
     <table border="1px">
@@ -44,7 +29,7 @@
             <td><?php  echo $dados['email']; ?></td>
             <td>
                 <a href="editar.php?id=<?=  $dados['id']; ?>">[Editar]</a>
-                <a href="editar.php?id=<?=  $dados['id']; ?>">[Excluir]</a>
+                <a href="excluir.php?id=<?=  $dados['id']; ?>">[Excluir]</a>
             </td>
 
         </tr>
