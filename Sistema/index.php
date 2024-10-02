@@ -22,20 +22,19 @@
 
     <h1 style="font-family: Arial, Helvetica, sans-serif;">Sistemas de Funcionarios</h1>
 
+
     <table border="1px">
         <tr>
-            <td><?php  echo $dados['id']; ?></td>
-            <td><?php  echo $dados['nome']; ?></td>
-            <td><?php  echo $dados['email']; ?></td>
+            <td><?php echo $dados['id']; ?></td>
+            <td><?php echo $dados['nome']; ?></td>
+            <td><?php echo $dados['email']; ?></td>
             <td>
-                <a href="editar.php?id=<?=  $dados['id']; ?>">[Editar]</a>
-                <a href="excluir.php?id=<?=  $dados['id']; ?>">[Excluir]</a>
+                <a href="editar.php?id=<?= $dados['id']; ?>">[Editar]</a>
+                <a href="excluir.php?id=<?= $dados['id']; ?>">[Excluir]</a>
             </td>
-
         </tr>
-    </table>
-        
-        <?php foreach ($lista as $dados): ?>
+
+        <?php foreach ($lista as $dados) : ?>
             <tr>
                 <td>id 1</td>
                 <td>nome 1</td>
@@ -43,6 +42,7 @@
                 <td>ações 1</td>
             </tr>
         <?php endforeach; ?>
+    </table>
 
 </body>
 
