@@ -1,3 +1,14 @@
+<?php
+require 'conexao.php';
+
+$lista = [];
+$sql = $pdo->query('SELECT*FROM funcionarios');
+$lista = [];
+if ($sql->rowCount() > 0) {
+    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

@@ -5,7 +5,7 @@ $nome = $_POST['nome'] ?? null;
 $email = $_POST['email'] ?? null;
 
 if ($nome && $email) {
-    $sql = $pdo->prepare("INSERT INTO usuario (nome, email) VALUES (:nome, :email)");
+    $sql = $pdo->prepare("INSERT INTO funcionarios (nome, email) VALUES (:nome, :email)");
     $sql->bindValue(':nome', $nome);
     $sql->bindValue(':email', $email);
 
